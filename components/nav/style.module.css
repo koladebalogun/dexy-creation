@@ -1,0 +1,152 @@
+.header {
+  font-size: 1.8rem;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0px 90px;
+  color: #000;
+  z-index: 10;
+  position: relative;
+}
+
+.header_inner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 5px;
+}
+
+.logo {
+  width: 130px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-30%);
+}
+
+.nav li {
+  list-style: none;
+  margin: 0 40px;
+}
+
+.nav li a {
+  text-decoration: none;
+  color: #000;
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+.hamburger-menu {
+  height: 56px;
+  width: 56px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+  cursor: pointer;
+}
+
+.hamburger-menu span {
+  width: 20px;
+  height: 3px;
+  margin: 2px 0;
+  background: #000;
+  display: block;
+}
+
+.li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  color: #666;
+  cursor: pointer;
+  width: 100px;
+}
+
+.li img {
+  width: 28px;
+  height: 28px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.li span {
+  font-size: 12px;
+  text-decoration: underline;
+  text-decoration-color: goldenrod;
+}
+
+.li span:hover {
+  color: #222;
+}
+
+.li::after {
+  content: "";
+  position: absolute;
+  right: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 20px;
+  background: #ccc;
+}
+
+.li:last-of-type::after {
+  display: none;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.name_wrapper{
+  width: 150px;
+  display: flex;
+  align-items: center;
+}
+
+.name{
+  width: 100%;
+}
+
+
+@media (max-width: 1440px) {
+  .header {
+    padding: 0 50px;
+    font-size: 1.6rem;
+  }
+
+  .logo {
+    font-size: 3.2rem;
+    flex: 4;
+  }
+
+  .hamburger-menu {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 0 12px;
+    height: 96px;
+    font-size: 1.2rem;
+  }
+
+  .header .nav {
+    display: none;
+  }
+}

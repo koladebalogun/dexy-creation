@@ -1,0 +1,131 @@
+.photo_loader {
+  position: absolute;
+  flex-direction: column;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo_loader .loader_logo {
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  position: absolute;
+  top: 0;
+  align-items: center;
+  justify-content: center;
+  padding: 35px 0px;
+  font-size: 14px;
+}
+
+.photo_loader .loader_images {
+  display: flex;
+  width: 100%;
+  height: 70vh;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.photo_loader .loader_image {
+  scale: 1.3;
+  opacity: 0;
+}
+
+.photo_loader .img_hr {
+  position: absolute;
+  height: 30vh;
+  object-fit: contain;
+}
+
+.photo_loader .img_vr {
+  position: absolute;
+  height: 50vh;
+  object-fit: contain;
+}
+
+.photo_loader .loading_bar {
+  display: flex;
+  width: 250px;
+  height: 1px;
+  background-color: goldenrod;
+}
+
+.photo_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 85vh;
+  width: 100%;
+  margin-top: 45px;
+  flex-direction: column;
+}
+
+.photo_container > .main_text .main_text_heading {
+  font-size: 9vw;
+  padding: 0px 10px;
+
+  font-weight: bold;
+  color: #000;
+  text-decoration: underline;
+  text-decoration-color: goldenrod;
+}
+
+.photo_container > .para_text {
+  padding: 10px 0px;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.photo_container > .scroll_down {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  bottom: 15px;
+}
+
+.photo_container > .scroll_down .scroll_down_bar {
+  height: 40px;
+  width: 1px;
+  background-color: goldenrod;
+}
+
+.carousel_container {
+  margin: 50px 10%;
+}
+
+.inner_carousel {
+  display: flex;
+}
+
+.carousel {
+  cursor: grab;
+  overflow: hidden;
+}
+
+.carousel_items {
+  min-height: 30rem;
+  min-width: 41rem;
+  padding: 20px;
+}
+
+.carousel_items img {
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+  pointer-events: none;
+}
+
+@media (max-width: 1240px) {
+}
+
+@media (max-width: 480px) {
+  .photo_wrapper{
+    padding: 13px;
+  }
+}

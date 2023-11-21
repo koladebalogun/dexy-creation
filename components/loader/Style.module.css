@@ -1,0 +1,83 @@
+body.loading {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.transition_image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 57vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* overflow: hidden; */
+}
+
+.transition_image img {
+  width: 450px;
+  display: flex;
+  position: absolute;
+  top: 10%;
+}
+
+.image_block {
+  position: absolute;
+  transform-origin: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image1 {
+  width: 400px;
+  left: 16%;
+  bottom: 14%;
+}
+
+.image3 {
+  width: 300px;
+  right: 12%;
+  top: 8%;
+}
+
+.image4 {
+  max-width: 400px;
+  width: 40%;
+  right: 20%;
+  bottom: 10%;
+}
+
+.image5 {
+  width: 280px;
+  left: 14%;
+  top: 12%;
+}
+
+.image_block img {
+  width: 100%;
+  object-fit: fill;
+}
+
+@media (max-width: 480px) {
+  .image_1 {
+    left: 4%;
+    bottom: 28%;
+  }
+
+  .image_3 {
+    top: 16%;
+    right: 4%;
+  }
+
+  .image_4 {
+    right: 6%;
+    bottom: 32%;
+  }
+
+  .image_5 {
+    left: 6%;
+    top: 18%;
+  }
+}

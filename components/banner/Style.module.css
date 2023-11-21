@@ -1,0 +1,191 @@
+.banner {
+  position: relative;
+  overflow: hidden;
+  height: 84.3vh;
+  margin-top: 40px;
+
+}
+
+.banner_row {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+
+}
+
+.center {
+  justify-content: center;
+  text-align: center;
+}
+
+.row_letter {
+  left: 0;
+}
+
+.right {
+  justify-content: flex-end;
+}
+
+.row_title,
+.row_letter {
+  font-size: 15rem;
+  font-weight: 500;
+  position: relative;
+  letter-spacing: -0.8rem;
+  display: inline-block;
+  white-space: nowrap;
+  height: 330px;
+  text-decoration: underline;
+  text-decoration-color: #fff;
+}
+
+.center .row_title{
+  color: #fff;
+  margin-top: -30px;
+}
+
+
+.row_col {
+  width: 50%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.row_message {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 2.6rem;
+  width: 340px;
+  text-decoration: underline;
+  text-decoration-color: goldenrod;
+}
+
+.scroll {
+  height: 160px;
+  width: 160px;
+  border-radius: 100%;
+  background: #000;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  bottom: 50px;
+  left: 160px;
+  color: #fff;
+}
+
+.scroll span {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 4px 0;
+}
+
+.transition_image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 57vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* overflow: hidden; */
+}
+
+.transition_image img {
+  width: 350px;
+  display: flex;
+}
+
+.final {
+  display: block;
+  top: 43%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  position: absolute;
+  width: 90%;
+  margin: 0 auto;
+  z-index: -100;
+  overflow: hidden;
+}
+
+.final img {
+  width: 100%;
+  max-width: 100%;
+}
+
+@media (max-width: 1440px) {
+
+
+  .row_col {
+    width: 70%;
+  }
+
+  .scroll {
+    left: 60px;
+  }
+}
+
+@media (max-width: 1240px) {
+  .row_col:last-child {
+    display: none;
+  }
+
+  .scroll {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner_row {
+    display: block;
+    padding: 20px;
+    color: #fff;
+  }
+
+  .row_message{
+    color: #000;
+  }
+
+  .row_title,
+  .row_letter {
+    font-size: 13rem;
+    height: 250px;
+    overflow: visible;
+    text-decoration-color: #fff;
+  }
+
+  .center .row_title{
+    color: #000;
+    margin-top: 10px;
+    text-decoration: underline;
+    text-decoration-color: goldenrod !important;
+  }
+
+  .row_col:last-child {
+    display: block;
+    width: 100%;
+    justify-content: flex-start;
+    margin-top: 50px;
+  }
+
+  .scroll {
+    height: 80px;
+    width: 80px;
+    display: flex;
+    left: 30px;
+  }
+
+  .scroll span {
+    font-size: 10px;
+    margin: 2px 0;
+  }
+
+  .transition_image {
+    top: 0;
+    height: 40vh;
+  }
+}

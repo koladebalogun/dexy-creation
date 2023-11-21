@@ -1,0 +1,152 @@
+.menu {
+  width: 280px;
+  min-height: 100px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  position: absolute;
+  top: 100%;
+  right: 15%;
+  background: #000;
+  color: #fff;
+  /* z-index: 9999999999999 !important; */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-radius: 1rem;
+}
+
+.wearsmenu {
+  width: 150px;
+  min-height: 100px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  position: absolute;
+  top: 100%;
+  left: 27%;
+  background: #000;
+  color: #fff;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  /* flex-direction: column; */
+  /* gap: 1rem; */
+  padding: 1rem 0;
+  border-radius: 1rem;
+}
+
+.wearsmenu ul li a:hover, .menu ul li a:hover{
+  text-decoration: underline;
+  text-decoration-color: goldenrod;
+}
+
+.menu h4,
+.wearsmenu h4 {
+  text-align: center;
+  font-size: 20px;
+}
+
+.menu ul {
+  padding: 0;
+}
+
+.flex {
+  display: flex !important;
+  gap: 20px !important;
+  width: 100%;
+  padding: 0 1rem;
+  align-items: flex-start;
+}
+
+.menu ul li,
+.wearsmenu ul li {
+  height: 30px;
+}
+
+.wearsmenu ul li a {
+  width: 100%;
+  color: #fff;
+  display: flex;
+  padding: 2px;
+  justify-content: center;
+  /* align-items: center; */
+  /* padding-left: 1rem !important; */
+}
+
+.menu ul li a {
+  width: 100%;
+  color: #fff;
+  display: flex;
+  padding: 2px;
+  /* justify-content: center; */
+  align-items: center;
+  padding-left: 3rem !important;
+}
+
+.menu ul li a:hover,
+.wearsmenu ul li a:hover {
+  /* background: #fff;
+  color: #000; */
+}
+
+.menu__img {
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 100px;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+
+.col h3 {
+  font-size: 18px ;
+}
+
+.col span:last-of-type {
+  font-size: 14px;
+  background: #fff;
+  color: #000;
+  border: 1px solid #fff;
+  text-align: center;
+  /* text-decoration: underline; */
+}
+
+.btn_primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border: 1px solid #fff;
+  background: #fff;
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 2px;
+  outline: none;
+  padding: 5px;
+}
+
+.btn_outlined {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border: 1px solid #fff;
+  background: #fff;
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 2px;
+  padding: 5px;
+  font-size: 15px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}

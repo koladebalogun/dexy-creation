@@ -1,0 +1,138 @@
+.party_container{
+  padding-top: 50px;
+}
+
+.logo span {
+  display: inline-block;
+  overflow: hidden;
+  text-decoration: underline;
+  text-decoration-color: goldenrod;
+}
+
+.partywears_header {
+  /* position: absolute; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  width: 100%;
+  height: fit-content;
+  /* display: none; */
+}
+
+.partywears_header p {
+  font-family: "Neutral Face";
+  font-size: 13px;
+  letter-spacing: 1px;
+  padding: 0px 40px;
+  color: #807f7b;
+}
+
+.partywears_header .logo span {
+  font-size: 40px;
+}
+
+.section {
+  display: flex;
+  justify-content: baseline;
+  width: 100%;
+}
+
+
+.section .partywears_header {
+  padding: 0px 40px;
+  /* padding-bottom: 30px; */
+  /* padding-top: 70px; */
+  width: 100%;
+}
+
+.section .section_container {
+  display: grid;
+  grid-template-columns: 1.75fr 3fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 60px;
+  height: 100%;
+}
+
+.section_container .left_side_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.left_side_container span {
+  width: 100%;
+  height: 550px;
+  position: relative;
+}
+
+
+.left_side_container span img {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  height: 100%;
+  transform: scale(1);
+  object-fit: contain;
+}
+
+
+.section_container .right_side_container {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 100%;
+  justify-content: end;
+}
+
+
+
+
+.right_side_container > span {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  justify-self: start;
+  align-self: self-start;
+}
+
+
+.right_side_container > span > h6 {
+  font-size: 115px;
+  font-weight: normal;
+  margin-bottom: 10px;
+  text-decoration: underline;
+  text-decoration-color: goldenrod;
+}
+
+.right_side_container ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  /* gap: 20px; */
+  width: 100%;
+}
+
+
+
+.right_side_container ul li span {
+  height: 100%;
+}
+
+.right_side_container ul li span img {
+  height: 100%;
+  width: 100%;
+  /* transform: scale(1.5, 1.5); */
+  object-fit: cover;
+  object-position: center;
+  padding: 10px;
+}
+
+
+@media (max-width: 480px) {
+  .party_container{
+    display: none;
+  }
+}
