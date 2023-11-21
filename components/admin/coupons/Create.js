@@ -5,9 +5,12 @@ import * as Yup from "yup";
 import AdminInput from "../../inputs/adminInput";
 import { toast } from "react-toastify";
 import axios from "axios";
-import { TextField } from "@material-ui/core";
-import { DesktopDatePicker, LocalizationProvider } from "@mui/x-date-pickers";
+import { TextField } from "@mui/material";
+import DesktopDatePicker from "@mui/lab/DesktopDatePicker";
+import LocalizationProvider from "@mui/lab/LocalizationProvider";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
+
+
 export default function Create({ setCoupons }) {
   const [name, setName] = useState("");
   const [discount, setDiscount] = useState(0);

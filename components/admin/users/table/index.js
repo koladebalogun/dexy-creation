@@ -18,11 +18,13 @@ import IconButton from "@mui/material/IconButton";
 import Tooltip from "@mui/material/Tooltip";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/material/Switch";
-import DeleteIcon from "@mui/icons-material/Delete";
-import FilterListIcon from "@mui/icons-material/FilterList";
+import DeleteIcon from "@mui/material/Icon";
+import FilterListIcon from "@mui/material/Icon";
 import { visuallyHidden } from "@mui/utils";
 import styles from "./styles.module.scss";
 import { RiDeleteBin7Fill } from "react-icons/ri";
+
+
 function descendingComparator(a, b, orderBy) {
   if (b[orderBy] < a[orderBy]) {
     return -1;
