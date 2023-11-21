@@ -32,7 +32,7 @@ export default function signin({ providers,country }) {
               <BiLeftArrowAlt />
             </div>
             <span>
-              We'd be happy to join us ! <Link href="/">Go Store</Link>
+               <Link href="/products">Visit our store</Link>
             </span>
           </div>
           <SignIn />

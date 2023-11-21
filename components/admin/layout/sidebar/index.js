@@ -66,14 +66,14 @@ export default function Sidebar() {
               </>
             </Link>
           </li>
-          <li className={route == "sales" ? styles.active : ""}>
+          {/* <li className={route == "sales" ? styles.active : ""}>
             <Link href="/admin/dashboard/sales">
               <>
                 <FcSalesPerformance />
                 <span className={styles.show}>Sales</span>
               </>
             </Link>
-          </li>
+          </li> */}
           <li className={route == "orders" ? styles.active : ""}>
             <Link href="/admin/dashboard/orders">
               <>
@@ -90,14 +90,14 @@ export default function Sidebar() {
               </>
             </Link>
           </li>
-          <li className={route == "messages" ? styles.active : ""}>
+          {/* <li className={route == "messages" ? styles.active : ""}>
             <Link href="/admin/dashboard/messages">
               <>
                 <AiFillMessage />
                 <span className={styles.show}>Messages</span>
               </>
             </Link>
-          </li>
+          </li> */}
         </ul>
         <div className={styles.sidebar__dropdown}>
           <div className={styles.sidebar__dropdown_heading}>

@@ -66,13 +66,13 @@ export default function dashboard({ users, orders, products }) {
               <GiTakeMyMoney />
             </div>
             <div className={styles.card__infos}>
-              <h4>+{orders.reduce((a, val) => a + val.total, 0)}$</h4>
+              <h4>+{orders.reduce((a, val) => a + val.total, 0)} NGN</h4>
               <h5>
                 -
                 {orders
                   .filter((o) => !o.isPaid)
                   .reduce((a, val) => a + val.total, 0)}
-                $ Unpaid yet.
+                NGN Unpaid yet.
               </h5>
               <span>Total Earnings</span>
             </div>
@@ -82,7 +82,7 @@ export default function dashboard({ users, orders, products }) {
           <div className={styles.orders}>
             <div className={styles.heading}>
               <h2>Recent Orders</h2>
-              <Link href="/admin/dashboard/orders">View All</Link>
+              <Link href="/admin/dashboard/orders" style={{textDecoration:'none'}}>View All</Link>
             </div>
             <table>
               <thead>
@@ -98,7 +98,7 @@ export default function dashboard({ users, orders, products }) {
                 {orders.map((order) => (
                   <tr>
                     <td>{order.user.name}</td>
-                    <td>{order.total} $</td>
+                    <td>{order.total} NGN</td>
                     <td>
                       {order.isPaid ? (
                         <img src="../../../images/verified.webp" alt="" />
@@ -138,7 +138,7 @@ export default function dashboard({ users, orders, products }) {
           <div className={styles.users}>
             <div className={styles.heading}>
               <h2>Recent Users</h2>
-              <Link href="/admin/dashboard/users">View All</Link>
+              <Link href="/admin/dashboard/users" style={{textDecoration:'none'}}>View All</Link>
             </div>
             <table>
               <tbody>

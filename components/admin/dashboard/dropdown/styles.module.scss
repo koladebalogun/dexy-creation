@@ -31,6 +31,7 @@
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       gap: 10px;
+      
       &_icon {
         width: 35px;
         height: 35px;
@@ -39,6 +40,7 @@
         place-items: center;
         cursor: pointer;
         background: $blue-color;
+        text-decoration: none;
         svg {
           width: 25px;
           height: 25px;

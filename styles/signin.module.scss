@@ -21,7 +21,7 @@
   &__header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 20px;
     max-width: 300px;
     .back__svg {
       width: 50px;
@@ -51,8 +51,9 @@
       a {
         color: $blue-color;
         cursor: pointer;
-        border-bottom: 1px solid $blue-color;
+        border-bottom: 1px solid goldenrod;
         padding-bottom: 5px;
+        text-decoration: none;
       }
     }
   }

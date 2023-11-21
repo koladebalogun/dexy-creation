@@ -41,11 +41,11 @@ export default function Dropdown({ userImage }) {
               <MdSpaceDashboard />
             </Link>
           </div>
-          <div className={styles.dropdown__content_icons_icon}>
+          {/* <div className={styles.dropdown__content_icons_icon}>
             <Link href="/admin/dashboard/sales">
               <FcSalesPerformance />
             </Link>
-          </div>
+          </div> */}
           <div className={styles.dropdown__content_icons_icon}>
             <Link href="/admin/dashboard/orders">
               <IoListCircleSharp />
