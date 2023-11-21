@@ -13,7 +13,7 @@ export default function NavMenu({ session }) {
           <div className={style.col}>
             <span>Hello 👋🏾,</span>
             <h3>{session?.user?.name}</h3>
-            <span onClick={() => signOut()}>Sign out</span>
+            <button className={style.btn_outlined} onClick={() => signOut()}>Sign out</button>
           </div>
         </div>
       ) : (
@@ -32,9 +32,9 @@ export default function NavMenu({ session }) {
           <li>
             <Link href="/profile/orders">My Orders</Link>
           </li>
-          <li>
+          {/* <li>
             <Link href="/profile/messages">Message Center</Link>
-          </li>
+          </li> */}
           <li>
             <Link href="/profile/address">Address</Link>
           </li>

@@ -5,21 +5,28 @@ import {
   RiShoppingCart2Line,
   RiAccountPinCircleLine,
   RiArrowDropDownFill,
+  RiHome2Line,
+  RiCamera3Line,
+  RiAccountPinBoxFill,
+  RiContactsBook2Line,
 } from "react-icons/ri";
+import { BiCartAdd } from "react-icons/bi";
+
+import { RxHamburgerMenu } from "react-icons/rx";
 import { GiDress } from "react-icons/gi";
 
-import {useSession} from 'next-auth/react'
+import { signIn, signOut, useSession } from "next-auth/react";
 import style from "./style.module.css";
 import NavMenu from "../nav-menu/NavMenu";
 import WearsNavMenu from "../nav-menu/WearsNavMenu";
 
-export default function Navbar({country}) {
+export default function Navbar({ country }) {
   const [visible, setVisible] = useState(false);
   const [wearsVisible, setWearsVisible] = useState(false);
-  const { data: session } = useSession()
+  const [navVisible, setNavVisible] = useState(false);
+  const { data: session } = useSession();
 
-  console.log(session)
-
+  console.log(session);
 
   return (
     <motion.div
@@ -68,17 +75,14 @@ export default function Navbar({country}) {
             /> */}
           </li>
 
-          <li
-            onClick={() => setVisible(!visible)}
-          >
+          <li onClick={() => setVisible(!visible)}>
             {session ? (
               <li className={style.li}>
                 <div className={style.flex}>
                   <img src={session?.user?.image} alt="" />
                   <div className={style.name_wrapper}>
-
-                  <span className={style.name}>{session?.user?.name}</span>
-                  <RiArrowDropDownFill  />
+                    <span className={style.name}>{session?.user?.name}</span>
+                    <RiArrowDropDownFill />
                   </div>
                 </div>
               </li>
@@ -102,23 +106,102 @@ export default function Navbar({country}) {
 
           <li className={style.li}>
             <Link href="/cart">
-              <RiShoppingCart2Line style={{ marginRight: "6px" }} color="goldenrod" />
+              <RiShoppingCart2Line
+                style={{ marginRight: "6px" }}
+                color="goldenrod"
+              />
               <span>Cart</span>
             </Link>
           </li>
-
-          {/* {userInfo && userInfo.isAdmin && (
-            <DropDown
-              title={"Admin"}
-              link1={"/admin/userlist"}
-              linkTitle1={"Users"}
-              link2={"/admin/productlist"}
-              linkTitle2={"Products"}
-              link3={"/admin/orderlist"}
-              linkTitle3={"Orders"}
-            />
-          )} */}
         </nav>
+
+        <div className={style.mobile_nav}>
+          <h1
+            onClick={() => setNavVisible(!navVisible)}
+            className={navVisible ? `${style.open}` : `${style.close}`}
+          >
+            <RxHamburgerMenu />
+          </h1>
+
+          {navVisible && (
+            <div className={style.mobile_nav_inner}>
+              <ul>
+                <li>
+                  <RiHome2Line />
+
+                  <Link href="/product">Home</Link>
+                </li>
+                <li>
+                  <GiDress />
+                  <Link href="/product">Ready To Wear</Link>
+                </li>
+                <li>
+                  <RiCamera3Line />
+
+                  <Link href="/photoshoot">Photoshoot</Link>
+                </li>
+                <li>
+                  <GiDress />
+
+                  <Link href="/partywears">Party Wears</Link>
+                </li>
+                <li>
+                  <RiShoppingCart2Line />
+                  <Link href="/cart">Cart</Link>
+                </li>
+              </ul>
+
+              <div>
+                {session ? (
+                  <>
+                    <div className={style.mobile_nav_user}>
+                      <img src={session?.user?.image} alt="" />
+                      <span>{session?.user?.name}</span>
+                    </div>
+
+                    <div className={style.user_links}>
+                      <ul>
+                        <li>
+                          <RiAccountPinBoxFill />
+
+                          <Link href="/profile">Profile</Link>
+                        </li>
+                        <li>
+                          <BiCartAdd />
+
+                          <Link href="/profile/orders">My Orders</Link>
+                        </li>
+                        <li>
+                          <RiContactsBook2Line />
+
+                          <Link href="/profile/address">Address</Link>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <button
+                        onClick={() => signOut()}
+                        className={style.btn_outlined}
+                      >
+                        Sign out
+                      </button>
+                    </div>
+                  </>
+                ) : (
+                  <div>
+                    <button
+                      onClick={() => signIn()}
+                      className={style.btn_outlined}
+                    >
+                      Sign In
+                    </button>
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
+        </div>
       </div>
     </motion.div>
   );
