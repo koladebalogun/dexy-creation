@@ -19,6 +19,8 @@ import SignUp from "@/components/signup/SignUp";
 
 export default function signin({ providers,country }) {
   const [loading, setLoading] = useState(false);
+
+
    
   return (
     <>
@@ -68,6 +70,9 @@ export default function signin({ providers,country }) {
 export async function getServerSideProps(context) {
   const { req, query } = context;
 
+  console.log(query)
+
+
   const session = await getSession({ req });
   const { callbackUrl } = query;
 
@@ -91,6 +96,7 @@ export async function getServerSideProps(context) {
 
   const csrfToken = await getCsrfToken(context);
   const providers = Object.values(await getProviders());
+
   return {
     props: {
       providers,

@@ -19,7 +19,7 @@ export default function NavMenu({ session }) {
       ) : (
         <div className={style.flex}>
           <button className={style.btn_outlined} onClick={() => signIn()}>
-            Register / Login
+             Login
           </button>
         </div>
       )}

@@ -1,9 +1,5 @@
 import fs from "fs";
 
-export const config = {
-  runtime: "experimental-edge",
-};
-
 export const imgMiddleware = async (req, res, next) => {
   try {
     if (!req.files) {

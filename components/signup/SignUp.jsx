@@ -73,7 +73,7 @@ export default function SignUp() {
       setLoading(false);
       setTimeout(async () => {
         let options = {
-          redirect: false,
+          redirect: true,
           email: email,
           password: password,
         };

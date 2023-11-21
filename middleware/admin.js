@@ -2,10 +2,6 @@ import { getToken } from "next-auth/jwt";
 import User from "../models/User";
 import { connectDb, disconnectDb } from "../utils/db";
 
-export const config = {
-  runtime: "experimental-edge",
-};
-
 
 export default async (req, res, next) => {
   const token = await getToken({

@@ -1,8 +1,5 @@
 import { getToken } from "next-auth/jwt";
 
-export const config = {
-  runtime: "experimental-edge",
-};
 
 export default async (req, res, next) => {
   const token = await getToken({

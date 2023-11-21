@@ -52,7 +52,7 @@ export default function SignIn({ callbackUrl, csrfToken }) {
   const signInHandler = async () => {
     setLoading(true);
     let options = {
-      redirect: false,
+      redirect: true,
       email: login_email,
       password: login_password,
     };
