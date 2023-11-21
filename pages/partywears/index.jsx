@@ -1,12 +1,12 @@
 import styles from "./Style.module.css";
 import React, { useState, useRef, useEffect, useLayoutEffect } from "react";
 import gsap from "gsap";
-// import MobilePartyWears from "../../components/mobile/MobilePartyWears"
 import images from "../../components/images/partywears";
 import Navbar from "@/components/nav/Navbar";
 import Footer from "@/components/footer/Footer";
 import { connectDb } from "@/utils/db";
 import axios from "axios"
+import MobilePartyWears from "@/components/mobile/MobilePartyWears";
 
 export default function PartyWears({ country }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -101,8 +101,8 @@ export default function PartyWears({ country }) {
         </section>
       </div>
 
-      {/* <MobilePartyWears /> */}
-      {/* <Footer /> */}
+      <MobilePartyWears />
+      <Footer />
     </>
   );
 }

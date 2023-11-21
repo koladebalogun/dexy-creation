@@ -148,13 +148,17 @@
 
   .row_message{
     color: #000;
+    display: none;
+    /* position: relative;
+    top: 60px; */
+
   }
 
   .row_title,
   .row_letter {
-    font-size: 13rem;
-    height: 250px;
-    overflow: visible;
+    font-size: 9rem;
+    height: 170px;
+    /* overflow: visible; */
     text-decoration-color: #fff;
   }
 
@@ -169,7 +173,7 @@
     display: block;
     width: 100%;
     justify-content: flex-start;
-    margin-top: 50px;
+    /* margin-top: 50px; */
   }
 
   .scroll {
