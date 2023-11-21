@@ -2,7 +2,7 @@ import styles from "./Style.module.css";
 import React, { useState, useRef, useEffect, useLayoutEffect } from "react";
 import gsap from "gsap";
 // import MobilePartyWears from "../../components/mobile/MobilePartyWears"
-import images from "./images/images";
+import images from "../../components/images/partywears";
 import Navbar from "@/components/nav/Navbar";
 import Footer from "@/components/footer/Footer";
 import { connectDb } from "@/utils/db";

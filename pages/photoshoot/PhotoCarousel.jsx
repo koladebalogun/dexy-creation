@@ -1,7 +1,7 @@
 import styles from "./Style.module.css";
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import images from "./images/images";
+import images from "../../components/images/photoshoot";
 
 
 
