@@ -6,9 +6,7 @@ import AdminInput from "../../inputs/adminInput";
 import { toast } from "react-toastify";
 import axios from "axios";
 import { TextField } from "@mui/material";
-import DesktopDatePicker from "@mui/lab/DesktopDatePicker";
-import LocalizationProvider from "@mui/lab/LocalizationProvider";
-import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
+
 
 
 export default function Create({ setCoupons }) {
@@ -86,7 +84,7 @@ export default function Create({ setCoupons }) {
               onChange={(e) => setDiscount(e.target.value)}
             />
             <div className={styles.date_picker}>
-              <LocalizationProvider dateAdapter={AdapterDateFns}>
+              {/* <LocalizationProvider dateAdapter={AdapterDateFns}>
                 <DesktopDatePicker
                   label="Start Date"
                   inputFormat="MM/dd/yyyy"
@@ -103,7 +101,7 @@ export default function Create({ setCoupons }) {
                   renderInput={(params) => <TextField {...params} />}
                   minDate={tomorrow}
                 />
-              </LocalizationProvider>
+              </LocalizationProvider> */}
             </div>
             <div className={styles.btnWrap}>
               <button type="submit" className={`${styles.btn} `}>

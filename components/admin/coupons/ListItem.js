@@ -3,10 +3,7 @@ import { useRef } from "react";
 import { useState } from "react";
 import { AiFillDelete, AiTwotoneEdit } from "react-icons/ai";
 import { toast } from "react-toastify";
-import { TextField } from "@mui/material/";
-import DesktopDatePicker from "@mui/lab/DesktopDatePicker";
-import LocalizationProvider from '@mui/lab/LocalizationProvider';
-import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
+
 import styles from "./styles.module.scss";
 export default function ListItem({ coupon, setCoupons }) {
   const [open, setOpen] = useState(false);
@@ -71,24 +68,7 @@ export default function ListItem({ coupon, setCoupons }) {
             onChange={(e) => setDiscount(e.target.value)}
             disabled={!open}
           />
-          <LocalizationProvider dateAdapter={AdapterDateFns}>
-            <DesktopDatePicker
-              label="Start Date"
-              inputFormat="MM/dd/yyyy"
-              value={startDate}
-              onChange={handleStartDate}
-              renderInput={(params) => <TextField {...params} />}
-              minDate={new Date()}
-            />
-            <DesktopDatePicker
-              label="End Date"
-              inputFormat="MM/dd/yyyy"
-              value={endDate}
-              onChange={handleEndDate}
-              renderInput={(params) => <TextField {...params} />}
-              minDate={tomorrow}
-            />
-          </LocalizationProvider>
+          
           <button
             className={styles.btn}
             onClick={() => handleUpdate(coupon._id)}
