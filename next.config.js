@@ -7,6 +7,13 @@ const nextConfig = {
     includePaths: [path.join(__dirname, "styles")],
     prependData: `@import "./base.scss";`,
   },
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.cache = false;
+    }
+
+    return config;
+  },
 };
 
 module.exports = nextConfig;
