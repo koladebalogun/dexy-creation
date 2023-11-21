@@ -25,7 +25,6 @@ export default function signin({ providers,country }) {
   return (
     <>
       <Navbar country={country} />
-      
       <div className={styles.login}>
         <div className={styles.login__container}>
           <div className={styles.login__header}>
@@ -69,22 +68,22 @@ export default function signin({ providers,country }) {
 }
 
 export async function getServerSideProps(context) {
-  // const { req, query } = context;
+  const { req, query } = context;
 
-  // console.log(query)
+  console.log(query)
 
 
-  // const session = await getSession({ req });
-  // const { callbackUrl } = query;
-  // console.log(callbackUrl)
+  const session = await getSession({ req });
+  const { callbackUrl } = query;
+  console.log(callbackUrl)
 
-  // if (session) {
-  //   return {
-  //     redirect: {
-  //       destination: callbackUrl,
-  //     },
-  //   };
-  // }
+  if (session) {
+    return {
+      redirect: {
+        destination: callbackUrl,
+      },
+    };
+  }
 
   let data = await axios
     .get("https://api.ipregistry.co/?key=c40mj3hsjkp2ibyx")
@@ -96,14 +95,14 @@ export async function getServerSideProps(context) {
     });
 
 
-  // const csrfToken = await getCsrfToken(context);
+  const csrfToken = await getCsrfToken(context);
   const providers = Object.values(await getProviders());
 
   return {
     props: {
       providers,
-      // csrfToken,
-      // callbackUrl,
+      csrfToken,
+      callbackUrl,
       country: { name: data.name, flag: data.flag.emojitwo, sign: data.code },
     },
   };
