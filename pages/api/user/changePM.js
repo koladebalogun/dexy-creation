@@ -1,7 +1,6 @@
 import {createRouter} from "next-connect";
 import User from "../../../models/User";
-import db, { connectDb, disconnectDb } from "../../../utils/db";
-import auth from "../../../middleware/auth";
+import { connectDb, disconnectDb } from "../../../utils/db";
 import auth from "@/middleware/auth";
 
 const router = createRouter().use(auth)
