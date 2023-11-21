@@ -1,5 +1,5 @@
 import Layout from "../../../components/admin/layout";
-import db from "../../../utils/db";
+import { connectDb } from "../../../utils/db";
 import Category from "../../../models/Category";
 import SubCategory from "../../../models/SubCategory";
 import { useState } from "react";
@@ -23,7 +23,7 @@ export default function subCategories({ categories, subCategories }) {
 }
 
 export async function getServerSideProps(context) {
-  db.connectDb();
+  connectDb();
   const categories = await Category.find({}).sort({ updatedAt: -1 }).lean();
   const subCategories = await SubCategory.find({})
     .populate({ path: "parent", model: Category })

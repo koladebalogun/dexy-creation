@@ -1,5 +1,5 @@
 import Layout from "../../../components/admin/layout";
-import db from "../../../utils/db";
+import { connectDb } from "../../../utils/db";
 import Coupon from "../../../models/Coupon";
 import { useState } from "react";
 import Create from "../../../components/admin/coupons/Create";
@@ -17,7 +17,7 @@ export default function coupons({ coupons }) {
 }
 
 export async function getServerSideProps(context) {
-  db.connectDb();
+  connectDb();
   const coupons = await Coupon.find({}).sort({ updatedAt: -1 }).lean();
   return {
     props: {
