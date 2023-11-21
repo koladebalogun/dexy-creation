@@ -3,7 +3,7 @@ import User from "../models/User";
 import { connectDb, disconnectDb } from "../utils/db";
 
 export const config = {
-  runtime: "edge",
+  runtime: "experimental-edge",
 };
 
 

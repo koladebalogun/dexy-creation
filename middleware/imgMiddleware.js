@@ -1,7 +1,7 @@
 import fs from "fs";
 
 export const config = {
-  runtime: "edge",
+  runtime: "experimental-edge",
 };
 
 export const imgMiddleware = async (req, res, next) => {
