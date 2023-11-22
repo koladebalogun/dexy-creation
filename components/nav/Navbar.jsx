@@ -129,7 +129,7 @@ export default function Navbar({ country }) {
                 <li>
                   <RiHome2Line />
 
-                  <Link href="/product">Home</Link>
+                  <Link href="/">Home</Link>
                 </li>
                 <li>
                   <GiDress />

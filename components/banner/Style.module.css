@@ -10,20 +10,22 @@
   overflow: hidden;
   display: flex;
   align-items: center;
-
 }
 
 .center {
   justify-content: center;
   text-align: center;
+
 }
 
 .row_letter {
   left: 0;
+
 }
 
 .right {
   justify-content: flex-end;
+
 }
 
 .row_title,
@@ -37,11 +39,13 @@
   height: 330px;
   text-decoration: underline;
   text-decoration-color: #fff;
+  display: none;
 }
 
 .center .row_title{
   color: #fff;
   margin-top: -30px;
+
 }
 
 
@@ -53,12 +57,16 @@
 }
 
 .row_message {
+  position: absolute;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 3.5rem;
   line-height: 2.6rem;
-  width: 340px;
+  /* width: 340px; */
   text-decoration: underline;
-  text-decoration-color: goldenrod;
+  text-decoration-color: #fff;
+  color: #fff;
+  right: 2.5%;
+  bottom: 3%;
 }
 
 .scroll {
@@ -74,19 +82,27 @@
   bottom: 50px;
   left: 160px;
   color: #fff;
+  
+}
+
+.scroll a{
+  color: #fff;
+  text-decoration: none;
+  
 }
 
 .scroll span {
   font-size: 18px;
   font-weight: 600;
   margin: 4px 0;
+  padding: 5px;
 }
 
 .transition_image {
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   left: 0;
-  height: 57vh;
+  height: 93vh;
   width: 100vw;
   display: flex;
   align-items: center;
@@ -101,12 +117,12 @@
 
 .final {
   display: block;
-  top: 43%;
+  top: 8%;
   left: 0;
   right: 0;
   margin: 0 auto;
   position: absolute;
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
   z-index: -100;
   overflow: hidden;
@@ -146,14 +162,6 @@
     color: #fff;
   }
 
-  .row_message{
-    color: #000;
-    display: none;
-    /* position: relative;
-    top: 60px; */
-
-  }
-
   .row_title,
   .row_letter {
     font-size: 9rem;
@@ -167,10 +175,17 @@
     margin-top: 10px;
     text-decoration: underline;
     text-decoration-color: goldenrod !important;
+    /* display: none; */
+  }
+
+  .row_message{
+    top: 10px;
+    color: #000;
+    bottom: 20%;
   }
 
   .row_col:last-child {
-    display: block;
+    display: none;
     width: 100%;
     justify-content: flex-start;
     /* margin-top: 50px; */
@@ -181,6 +196,7 @@
     width: 80px;
     display: flex;
     left: 30px;
+    bottom: 20%;
   }
 
   .scroll span {
@@ -190,6 +206,25 @@
 
   .transition_image {
     top: 0;
-    height: 40vh;
+    height: 100%;
+  }
+
+  .final {
+    display: block;
+    top: 20%;
+    left: 0;
+    right: 0;
+     /* position: absolute; */
+    width: 95%;
+    height:640px;
+    margin: 0 auto;
+    z-index: -100;
+    overflow: hidden;
+  }
+  
+  .final img {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
   }
 }

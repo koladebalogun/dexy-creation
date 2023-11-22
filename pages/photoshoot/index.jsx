@@ -127,7 +127,7 @@ export default function Photoshoots({country}) {
         <div className={styles.photo_loader}>
           <div className={styles.loader_images}>
             <img
-              src="/images/p-1.webp"
+              src="/images/image1.webp"
               alt=""
               className={`${styles.loader_image} ${styles.img_hr} ${styles.img1}`}
               ref={loader_image1}
@@ -157,7 +157,7 @@ export default function Photoshoots({country}) {
         <div className={styles.photo_container}>
           <div className={styles.main_text} ref={main_text}>
             <span>
-              <h1 className={styles.main_text_heading}>KELI'S STUDIO</h1>
+              <h1 className={styles.main_text_heading}>KELIKUME'S STUDIO</h1>
             </span>
           </div>
           <div className={styles.para_text} ref={para_text}>

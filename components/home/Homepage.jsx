@@ -27,10 +27,10 @@ export default function Homepage() {
               {!loading && (
                 <div className={`${style.transition_image} ${style.final}`}>
                   <motion.img
-                    transition={{
-                      ease: [0.6, 0.01, -0.05, 0.9],
-                      duration: 1.6,
-                    }}
+                    // transition={{
+                    //   ease: [0.6, 0.01, -0.05, 0.9],
+                    //   duration: 1.6,
+                    // }}
                     src={"/images/image-2.webp"}
                     layoutId="main-image-1"
                   />

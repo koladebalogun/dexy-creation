@@ -1,6 +1,7 @@
 import style from "./Style.module.css";
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const banner = {
   animate: {
@@ -72,11 +73,7 @@ const BannerRowTop = ({ title }) => {
         }}
         className={style.row_col}
       >
-        <span className={style.row_message}>
-          🌟 Elevate Your Wardrobe: Unleash your inner style maven with our
-          curated collections, featuring hand-picked fashion pieces that
-          redefine elegance.
-        </span>
+        <span className={style.row_message}>🌟 Elevate Your Wardrobe</span>
       </motion.div>
     </div>
   );
@@ -91,28 +88,30 @@ const BannerRowBottom = ({ title }) => {
         transition={{ ease: [0.6, 0.01, -0.05, 0.95], duration: 1, delay: 1 }}
         className={style.scroll}
       >
-        <motion.span
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{
-            ease: "easeInOut",
-            duration: 1,
-            delay: 1.8,
-          }}
-        >
-          Ready
-        </motion.span>
-        <motion.span
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{
-            ease: "easeInOut",
-            duration: 1,
-            delay: 1.8,
-          }}
-        >
-          Wears
-        </motion.span>
+        <Link href="/product">
+          <motion.span
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{
+              ease: "easeInOut",
+              duration: 1,
+              delay: 1.8,
+            }}
+          >
+            Shop
+          </motion.span>
+          <motion.span
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{
+              ease: "easeInOut",
+              duration: 1,
+              delay: 1.8,
+            }}
+          >
+            Now
+          </motion.span>
+        </Link>
       </motion.div>
       <AnimatedLetters title={title} />
     </div>

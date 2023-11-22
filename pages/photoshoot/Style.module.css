@@ -110,13 +110,13 @@
 
 .carousel_items {
   min-height: 30rem;
-  min-width: 41rem;
-  padding: 20px;
+  min-width: 33rem;
+  /* padding: 20px; */
 }
 
 .carousel_items img {
-  width: 100%;
-  height: 100%;
+  width: 500px;
+  height: 600px;
   border-radius: 2rem;
   pointer-events: none;
 }
@@ -127,5 +127,23 @@
 @media (max-width: 480px) {
   .photo_wrapper{
     padding: 10px;
+  }
+
+  .carousel_container {
+    margin: 50px 0%;
+    /* display: none; */
+  }
+
+  .carousel_items {
+    min-height: 25rem;
+  min-width: 20rem;
+    padding: 10px;
+  }
+  
+  .carousel_items img {
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+    pointer-events: none;
   }
 }

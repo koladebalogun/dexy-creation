@@ -15,7 +15,7 @@ export default function MobilePartyWears() {
       <div>
         <div className={styles.mobile_hero}>
           <div className={styles.mobile_hero_inner} data-aos="fade-up">
-            <img src='/images/image1.webp' />
+            <img src='/images/image-6.webp' />
             <div className={styles.mobile_hero_inner_header}>Bold</div>
           </div>
         </div>
@@ -24,7 +24,7 @@ export default function MobilePartyWears() {
       <div>
         <div className={styles.mobile_hero}>
           <div className={styles.mobile_hero_inner} data-aos="fade-up">
-            <img src='/images/image-2.webp' />
+            <img src='/images/image-7.webp' />
             <div className={styles.mobile_hero_inner_header}>
               Spicy
             </div>
@@ -35,7 +35,7 @@ export default function MobilePartyWears() {
       <div>
         <div className={styles.mobile_hero}>
           <div className={styles.mobile_hero_inner} data-aos="fade-up">
-            <img src='/images/image3.webp' />
+            <img src='/images/image-8.webp' />
             <div className={styles.mobile_hero_inner_header}>Radiant</div>
           </div>
         </div>
@@ -44,7 +44,7 @@ export default function MobilePartyWears() {
       <div>
         <div className={styles.mobile_hero}>
           <div className={styles.mobile_hero_inner} data-aos="fade-up">
-            <img src='/images/image4.webp' />
+            <img src='/images/image-9.webp' />
             <div className={styles.mobile_hero_inner_header}>Glamourous</div>
           </div>
         </div>
@@ -53,7 +53,7 @@ export default function MobilePartyWears() {
       <div>
         <div className={styles.mobile_hero}>
           <div className={styles.mobile_hero_inner} data-aos="fade-up">
-            <img src='/images/image5.webp' />
+            <img src='/images/image-10.webp' />
             <div className={styles.mobile_hero_inner_header}>
               Opulent
             </div>
