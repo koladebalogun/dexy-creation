@@ -12,23 +12,23 @@ export async function middleware(req) {
 
   console.log(session);
 
-  if (pathname == "/checkout") {
-    if (!session) {
-      return NextResponse.redirect(`${origin}`);
-    }
-  }
+  // if (pathname == "/checkout") {
+  //   if (!session) {
+  //     return NextResponse.redirect(`${origin}`);
+  //   }
+  // }
 
-  if (pathname.startsWith("/order")) {
-    if (!session) {
-      return NextResponse.redirect(`${origin}`);
-    }
-  }
+  // if (pathname.startsWith("/order")) {
+  //   if (!session) {
+  //     return NextResponse.redirect(`${origin}`);
+  //   }
+  // }
 
-  if (pathname.startsWith("/profile")) {
-    if (!session) {
-      return NextResponse.redirect(`${origin}`);
-    }
-  }
+  // if (pathname.startsWith("/profile")) {
+  //   if (!session) {
+  //     return NextResponse.redirect(`${origin}`);
+  //   }
+  // }
 
   // if (pathname.startsWith("/admin")) {
   //   if (!session) {
