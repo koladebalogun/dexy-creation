@@ -97,7 +97,7 @@ export default function dashboard({ users, orders, products }) {
               <tbody>
                 {orders.map((order) => (
                   <tr>
-                    <td>{order.user.name}</td>
+                    <td>{order.user?.name}</td>
                     <td>{order.total} NGN</td>
                     <td>
                       {order.isPaid ? (
