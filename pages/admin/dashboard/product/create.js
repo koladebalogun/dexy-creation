@@ -71,8 +71,6 @@ export default function create({ parents, categories }) {
   const dispatch = useDispatch();
   //   console.log(product);
 
-  console.log(product);
-
   useEffect(() => {
     if (product.parent !== "") {
       const getParentData = async () => {
@@ -181,6 +179,8 @@ export default function create({ parents, categories }) {
           color: product.color.color,
         },
       });
+
+      console.log(data)
       setLoading(false);
       toast.success(data.message);
     } catch (error) {
