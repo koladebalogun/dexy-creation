@@ -7,13 +7,24 @@ import Link from "next/link";
 import { TbEdit } from "react-icons/tb";
 import { AiOutlineEye } from "react-icons/ai";
 import { RiDeleteBin2Line } from "react-icons/ri";
+import axios from "axios";
 
 
 export default function ProductCard({ product, onDelete }) {
 
-  const handleDelete = () => {
-    onDelete(product._id);
+  const handleDelete = async () => {
+    try {
+      // Make an HTTP request to your server to delete the product
+      await axios.delete(`/api/product/${product._id}`);
+      // Call the onDelete callback to update the UI or perform additional actions
+      onDelete(product._id);
+    } catch (error) {
+      console.error('Error deleting product:', error);
+    }
   };
+
+
+
   
   return (
     <div className={styles.product}>

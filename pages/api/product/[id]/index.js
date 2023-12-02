@@ -1,6 +1,6 @@
 import { createRouter } from "next-connect";
 import Product from "../../../../models/Product";
-import {connectDb, disconnectDb} from "../../../../utils/db";
+import { connectDb, disconnectDb } from "../../../../utils/db";
 
 const router = createRouter();
 
@@ -37,6 +37,23 @@ router.get(async (req, res) => {
     });
   } catch (error) {
     return res.status(500).json({ message: error.message });
+  }
+});
+
+router.delete(async (req, res) => {
+  try {
+    connectDb();
+    const id = req.query.id;
+
+    // Implement the logic to delete the product by ID
+    await Product.findByIdAndDelete(id);
+
+    disconnectDb();
+
+    res.status(204).end(); // Successfully deleted
+  } catch (error) {
+    console.error("Error deleting product:", error);
+    res.status(500).json({ error: "Internal Server Error" });
   }
 });
 
