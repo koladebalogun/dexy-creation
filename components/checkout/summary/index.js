@@ -86,7 +86,7 @@ export default function Summary({
               </button> */}
               <div className={styles.infos}>
                 <span>
-                  Total : <b>{cart.cartTotal} NGN</b>{" "}
+                  Total : <b>{cart.cartTotal} $</b>{" "}
                 </span>
                 {/* {discount > 0 && (
                   <span className={styles.coupon_span}>

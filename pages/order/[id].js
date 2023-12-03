@@ -144,10 +144,10 @@ export default function order({
                       <img src={product.color.image} alt="" /> / {product.size}
                     </div>
                     <div className={styles.product__infos_priceQty}>
-                      {product.price} NGN x {product.qty}
+                      {product.price} $ x {product.qty}
                     </div>
                     <div className={styles.product__infos_total}>
-                      {product.price * product.qty} NGN
+                      {product.price * product.qty} $
                     </div>
                   </div>
                 </div>
@@ -157,7 +157,7 @@ export default function order({
                   <>
                     <div className={styles.order__products_total_sub}>
                       <span>Subtotal</span>
-                      <span>{orderData.totalBeforeDiscount} NGN</span>
+                      <span>{orderData.totalBeforeDiscount} $</span>
                     </div>
                     <div className={styles.order__products_total_sub}>
                       <span>
@@ -168,31 +168,31 @@ export default function order({
                         {(
                           orderData.totalBeforeDiscount - orderData.total
                         ).toFixed(2)}
-                        NGN
+                        $
                       </span>
                     </div>
                     <div className={styles.order__products_total_sub}>
                       <span>Tax price</span>
-                      <span>+{orderData.taxPrice} NGN</span>
+                      <span>+{orderData.taxPrice} $</span>
                     </div>
                     <div
                       className={`${styles.order__products_total_sub} ${styles.bordertop}`}
                     >
                       <span>TOTAL TO PAY</span>
-                      <b>{orderData.total} NGN</b>
+                      <b>{orderData.total} $</b>
                     </div>
                   </>
                 ) : (
                   <>
                     <div className={styles.order__products_total_sub}>
                       <span>Tax price</span>
-                      <span>+{orderData.taxPrice} NGN</span>
+                      <span>+{orderData.taxPrice} $</span>
                     </div>
                     <div
                       className={`${styles.order__products_total_sub} ${styles.bordertop}`}
                     >
                       <span>TOTAL TO PAY</span>
-                      <b>{orderData.total} NGN</b>
+                      <b>{orderData.total} $</b>
                     </div>
                   </>
                 )}

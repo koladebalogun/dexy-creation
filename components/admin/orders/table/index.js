@@ -56,7 +56,7 @@ function Row(props) {
             />
           )}
         </TableCell>
-        <TableCell align="right">
+        {/* <TableCell align="right">
           <span
             className={
               row.status == "Not Processed"
@@ -74,8 +74,8 @@ function Row(props) {
           >
             {row.status}
           </span>
-        </TableCell>
-        <TableCell align="right">{row.couponApplied || "-"}</TableCell>
+        </TableCell> */}
+        {/* <TableCell align="right">{row.couponApplied || "-"}</TableCell> */}
         <TableCell align="right">
           <b>{row.total}$</b>
         </TableCell>
@@ -97,16 +97,16 @@ function Row(props) {
                   </TableRow>
                 </TableHead>
                 <TableBody>
-                  <TableRow key={row.user.id}>
+                  <TableRow key={row.user?.id}>
                     <TableCell component="th" scope="row">
                       <img
-                        src={row.user.image}
+                        src={row.user?.image}
                         className={styles.table__img}
                         alt=""
                       />
                     </TableCell>
-                    <TableCell>{row.user.name}</TableCell>
-                    <TableCell align="left">{row.user.email}</TableCell>
+                    <TableCell>{row.user?.name}</TableCell>
+                    <TableCell align="left">{row.user?.email}</TableCell>
                     <TableCell align="right">
                       {row.shippingAddress.firstName}{" "}
                       {row.shippingAddress.lastName} <br />
@@ -219,8 +219,8 @@ export default function CollapsibleTable({ rows }) {
             <TableCell>Order</TableCell>
             <TableCell align="right">Payment Method</TableCell>
             <TableCell align="right">Paid</TableCell>
-            <TableCell align="right">Status</TableCell>
-            <TableCell align="right">Coupon</TableCell>
+            {/* <TableCell align="right">Status</TableCell> */}
+            {/* <TableCell align="right">Coupon</TableCell> */}
             <TableCell align="right">Total</TableCell>
           </TableRow>
         </TableHead>

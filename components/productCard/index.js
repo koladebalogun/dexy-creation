@@ -57,7 +57,7 @@ export default function ProductCard({ product }) {
               : product.name}
           </h1>
           <span>
-            {`NGN${prices[0]}`}
+            {`$${prices[0]}`}
           </span>
           <div className={styles.product__colors}>
             {styless &&
