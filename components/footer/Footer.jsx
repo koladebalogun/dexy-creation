@@ -31,7 +31,7 @@ function Footer() {
           <span>Twitter</span>
         </div>
 
-        <a href="https://instagram.com/kelikumefashionandstyling?igshid=YzAwZjE1ZTI0Zg==" target="_blank">
+        <a href="https://www.instagram.com/dexy_creation?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
           <div className={style.footer_button}>
             <div className={style.footer_icon}>
               <i className="fab fa-instagram"></i>
