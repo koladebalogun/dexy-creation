@@ -111,7 +111,7 @@ export default function Product({ product, selected, setSelected }) {
           <div className={styles.product__shipping}>
             {product.shipping
               ? `+${product.shipping} $ Shipping fee`
-              : "Free Shipping"}
+              : ""}
           </div>
           {product.quantity < 1 && (
             <div className={styles.notAvailable}>

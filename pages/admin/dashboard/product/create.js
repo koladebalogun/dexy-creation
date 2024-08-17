@@ -23,6 +23,7 @@ import Questions from "../../../../components/admin/createProduct/clickToAdd/Que
 import { validateCreateProduct } from "../../../../utils/validation";
 import dataURItoBlob from "../../../../utils/dataURItoBlob";
 import { uploadImages } from "../../../../requests/upload";
+import Spinner from "@/components/spinner/Spinner";
 
 const initialState = {
   name: "",
@@ -344,8 +345,14 @@ export default function create({ parents, categories }) {
             <button
               className={`${styles.btn} ${styles.btn__primary} ${styles.submit_btn}`}
               type="submit"
+              disabled={loading}
+              onClick={() => createProduct()}
             >
-              Create Product
+              {loading ? (
+                <Spinner />
+              ) : (
+                "Create Product"
+              )}
             </button>
           </Form>
         )}

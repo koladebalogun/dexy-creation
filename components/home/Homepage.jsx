@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Banner from "../../components/banner/Banner";
+import Banner from "../banner/Banner";
 import Loader from "../loader/Loader";
 import { AnimatePresence, motion, AnimateSharedLayout } from "framer-motion";
 import style from "../banner/Style.module.css";

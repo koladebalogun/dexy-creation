@@ -157,7 +157,7 @@ export default function Photoshoots({country}) {
         <div className={styles.photo_container}>
           <div className={styles.main_text} ref={main_text}>
             <span>
-              <h1 className={styles.main_text_heading}>KELIKUME'S STUDIO</h1>
+              <h1 className={styles.main_text_heading}>DEXY CREATIONS</h1>
             </span>
           </div>
           <div className={styles.para_text} ref={para_text}>

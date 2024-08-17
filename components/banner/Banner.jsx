@@ -33,8 +33,8 @@ const Banner = () => {
   }, []);
   return (
     <motion.div className={style.banner} variants={banner}>
-      <BannerRowTop title={"keli's"} />
-      <BannerRowBottom title={"store"} />
+      <BannerRowTop title={"dexy"} />
+      <BannerRowBottom title={"creation"} />
     </motion.div>
   );
 };
@@ -73,7 +73,7 @@ const BannerRowTop = ({ title }) => {
         }}
         className={style.row_col}
       >
-        <span className={style.row_message}>🌟 Elevate Your Wardrobe</span>
+        {/* <span className={style.row_message}>🌟 Elevate Your Wardrobe</span> */}
       </motion.div>
     </div>
   );

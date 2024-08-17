@@ -19,7 +19,7 @@ export default function dashboard({ users, orders, products }) {
   return (
     <div>
       <Head>
-        <title>Kelikume - Admin Dashboard</title>
+        <title>Dexy-Creation - Admin Dashboard</title>
       </Head>
       <Layout>
         <div className={styles.header}>

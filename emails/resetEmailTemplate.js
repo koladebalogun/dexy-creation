@@ -96,7 +96,7 @@ export const resetEmailTemplate = (to, url) => {
                     <td class="es-m-p0r" valign="top" align="center" style="padding:0;Margin:0;width:560px">
                      <table cellpadding="0" cellspacing="0" width="100%" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
                        <tr>
-                        <td align="center" style="padding:0;Margin:0;font-size:0px"><a target="_blank" href="https://kelikume.co.uk" style="mso-line-height-rule:exactly;text-decoration:underline;color:#26C6DA;font-size:14px"><img src="https://eclafxw.stripocdn.email/content/guids/CABINET_e9c61ceace750d5dcf3dfc1a7266e2f5f05f1a1dabecd36af00c3173c1378d12/images/logo3.png" alt="Logo" style="display:block;font-size:14px;border:0;outline:none;text-decoration:none" title="Logo" height="55"></a></td>
+                        <td align="center" style="padding:0;Margin:0;font-size:0px"><a target="_blank" href="https://Dexy-creation.store" style="mso-line-height-rule:exactly;text-decoration:underline;color:#26C6DA;font-size:14px"><img src="https://eclafxw.stripocdn.email/content/guids/CABINET_e9c61ceace750d5dcf3dfc1a7266e2f5f05f1a1dabecd36af00c3173c1378d12/images/logo3.png" alt="Logo" style="display:block;font-size:14px;border:0;outline:none;text-decoration:none" title="Logo" height="55"></a></td>
                        </tr>
                      </table></td>
                    </tr>

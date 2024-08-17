@@ -2,7 +2,7 @@ import style from "./Style.module.css";
 import React from "react";
 import { motion } from "framer-motion";
 
-import Image from "../../components/image/Image";
+import Image from "../image/Image";
 
 const container = {
   show: {
@@ -77,7 +77,6 @@ export const ImageBlock = ({ posX, posY, variants, id }) => {
         left: `${posX}vw `,
       }}
     >
-      
       <Image
         src={`/images/${id}.webp`}
         fallback={`/images/${id}.jpg`}

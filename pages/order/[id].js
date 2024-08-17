@@ -4,6 +4,7 @@ import User from "../../models/User";
 import { IoIosArrowForward } from "react-icons/io";
 import db, { connectDb, disconnectDb } from "../../utils/db";
 import { PayPalButtons, usePayPalScriptReducer } from "@paypal/react-paypal-js";
+import { FlutterWaveButton, closePaymentModal } from 'flutterwave-react-v3';
 import { useReducer, useEffect } from "react";
 import axios from "axios";
 import { emptyCart } from "@/store/cartSlice";
@@ -22,6 +23,7 @@ function reducer(state, action) {
       return { ...state, loading: false, success: false, error: false };
   }
 }
+
 export default function order({
   orderData,
   paypal_client_id,
@@ -30,6 +32,7 @@ export default function order({
 }) {
   const [{ isPending }, paypalDispatch] = usePayPalScriptReducer();
   const [{success}, dispatch] = useReducer(reducer, {});
+
 
   useEffect(() => {
     if (!orderData._id) {
@@ -50,6 +53,56 @@ export default function order({
       });
     }
   }, [order]);
+
+  const config = {
+    public_key: process.env.NEXT_PUBLIC_FLUTTERWAVE_PUBLIC_KEY,
+    tx_ref: Date.now(),
+    amount: orderData.total,
+    currency: 'USD',
+    payment_options: 'card,mobilemoney,ussd',
+    customer: {
+      email: orderData.user.email,
+      phone_number: '070********',
+      name: orderData.user.name,
+    },
+    customizations: {
+      title: 'Dexy creations',
+      description: 'Payment for items in cart',
+      logo: 'https://st2.depositphotos.com/4403291/7418/v/450/depositphotos_74189661-stock-illustration-online-shop-log.jpg',
+    },
+  };
+
+  const fwConfig = {
+    ...config,
+    text: 'Pay with Flutterwave!',
+    callback: async (response) => {
+      console.log(response);
+  
+      if (response.status === 'successful') {
+        try {
+          // Update the order as paid
+          const { data } = await axios.put(`/api/order/${orderData._id}/pay`, {
+            paymentMethod: 'flutterwave',
+            order_id: orderData._id,
+            paymentDetails: response,
+          });
+          
+          // Dispatch the success action
+          dispatch({ type: "PAY_SUCCESS", payload: data });
+          console.log('Order payment updated successfully');
+
+          window.location.reload();
+        } catch (error) {
+          console.error('Error updating order payment status', error);
+          dispatch({ type: "PAY_FAIL", payload: error.message });
+        }
+      }
+  
+      closePaymentModal(); // this will close the modal programmatically
+    },
+    onClose: () => {},
+  };
+  
 
   function createOrderHanlder(data, actions) {
     return actions.order
@@ -267,7 +320,9 @@ export default function order({
                   // />
                 )}
                 {orderData.paymentMethod == "cash" && (
-                  <div className={styles.cash}>cash</div>
+                  <div className={styles.cash}>
+                    <FlutterWaveButton {...fwConfig} />
+                  </div>
                 )}
               </div>
             )}
@@ -277,6 +332,8 @@ export default function order({
     </>
   );
 }
+
+
 
 export async function getServerSideProps(context) {
   connectDb();

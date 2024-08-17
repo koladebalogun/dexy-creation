@@ -153,7 +153,7 @@ export default function Infos({ product, setActiveImg }) {
         <span className={styles.infos__shipping}>
           {product.shipping
             ? `+${product.shipping}$ Shipping fee`
-            : "Free Shipping"}
+            : ""}
         </span>
         <span>
           {size

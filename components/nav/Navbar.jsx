@@ -41,7 +41,8 @@ export default function Navbar({ country }) {
     >
       <div className={style.header_inner}>
         <Link href="/">
-          <img src="/images/logo2.png" alt="kelikume" className={style.logo} />
+          <h3 className={style.logo}>DEXY-CREATIONS</h3>
+          {/* <img src="/images/logo2.png" alt="dexy-" className={style.logo} /> */}
         </Link>
         <nav className={style.nav}>
           <li className={style.li}>

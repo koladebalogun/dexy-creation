@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
 .banner {
   position: relative;
   overflow: hidden;
   height: 84.3vh;
   margin-top: 40px;
-
 }
 
 .banner_row {
@@ -30,7 +31,7 @@
 
 .row_title,
 .row_letter {
-  font-size: 15rem;
+  font-size: 12rem;
   font-weight: 500;
   position: relative;
   letter-spacing: -0.8rem;
@@ -39,7 +40,12 @@
   height: 330px;
   text-decoration: underline;
   text-decoration-color: #fff;
-  display: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  /* display: none; */
 }
 
 .center .row_title{
@@ -65,7 +71,7 @@
   text-decoration: underline;
   text-decoration-color: #fff;
   color: #fff;
-  right: 2.5%;
+  right: 5%;
   bottom: 3%;
 }
 
@@ -102,7 +108,7 @@
   /* position: absolute; */
   top: 0;
   left: 0;
-  height: 93vh;
+  height: 90vh;
   width: 100vw;
   display: flex;
   align-items: center;
@@ -117,12 +123,12 @@
 
 .final {
   display: block;
-  top: 8%;
+  top: 10%;
   left: 0;
   right: 0;
   margin: 0 auto;
   position: absolute;
-  width: 95%;
+  width: 90%;
   margin: 0 auto;
   z-index: -100;
   overflow: hidden;
@@ -164,8 +170,8 @@
 
   .row_title,
   .row_letter {
-    font-size: 9rem;
-    height: 170px;
+    font-size: 5.6rem;
+    height: 100px;
     /* overflow: visible; */
     text-decoration-color: #fff;
   }
@@ -185,7 +191,7 @@
   }
 
   .row_col:last-child {
-    display: none;
+    /* display: none; */
     width: 100%;
     justify-content: flex-start;
     /* margin-top: 50px; */
