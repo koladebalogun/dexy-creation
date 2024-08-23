@@ -161,11 +161,13 @@ export default function Infos({ product, setActiveImg }) {
             : product.sizes.reduce((start, next) => start + next.qty, 0)}{" "}
           pieces available.
         </span>
+
         <div className={styles.infos__sizes}>
           <h4>Select a Size : </h4>
           <div className={styles.infos__sizes_wrap}>
             {product.sizes.map((size, i) => (
               <Link
+                style={{textDecoration: "none", fontSize:"10px"}}
                 href={`/product/${product.slug}?style=${router.query.style}&size=${i}`}
               >
                 <div

@@ -17,6 +17,8 @@ export default function Sizes({ sizes, product, setProduct }) {
       setProduct({ ...product, sizes: values });
     }
   };
+
+  console.log(sizesList)
   return (
     <div>
       <div className={styles.header}>Sizes / Quantity /Price</div>
