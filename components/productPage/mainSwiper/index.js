@@ -7,24 +7,7 @@ export default function MainSwiper({ images, activeImg }) {
     <div className={styles.swiper}>
       <div className={styles.swiper__active}>
         <img src={ activeImg || images[active].url} />
-        {/* <ReactImageMagnify
-          {...{
-            smallImage: {
-              alt: "",
-              isFluidWidth: true,
-              src: activeImg || images[active].url,
-            },
-            largeImage: {
-              src: activeImg || images[active].url,
-              width: 1500,
-              height: 2000,
-            },
-            enlargedImageContainerDimensions: {
-              width: "200%",
-              height: "100%",
-            },
-          }}
-        /> */}
+        
       </div>
       <div className={styles.swiper__list}>
         {images.map((img, i) => (
